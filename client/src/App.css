@@ -1,38 +1,378 @@
-.App {
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.app-container {
+  width: 1000px;
+  margin: 0px auto;
+}
+
+
+/* Register User Page CSS                                            */
+
+.new-user-container {
+  
+}
+
+.new-user-h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
   text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.new-user-link {
+  text-align: end;
+  margin-top: 13px;
+  margin-right: 254px;
+  font-size: medium;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.new-user-form-container {
+  margin-top: 20px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.new-user-form-h3 {
+  text-align: center;
+  width: 150px;
+  background-color: white;
+  position: relative;
+  top: -450px;
+  right: -160px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-user-form {
+  width: 700px;
+  height: 375px;
+  border: 2px solid black;
+  padding-top: 60px;
+}
+
+.new-user-input1, .new-user-input2, .new-user-input3, .new-user-input4, .new-user-input5, .new-user-input6 {
+  margin-left: 30px;
+  width: 300px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.new-user-input1 {
+  margin-left: 32px;
+}
+
+.new-user-input3 {
+  margin-left: 68px;
+}
+
+.new-user-input4 {
+  margin-left: 37px;
+}
+
+.new-user-input5 {
+  margin-left: 35px;
+}
+
+.new-user-input5 {
+  margin-left: 37px;
+}
+
+.new-user-input6 {
+  margin-left: 34px;
+}
+
+
+.user-row {
+  text-align: start;
+  margin-left: 100px;
+}
+
+.new-user-info-message {
+  position: relative;
+  left: -84px;
+  margin-bottom: 10px;
+}
+
+.new-user-submit {
+  position: relative;
+  left: -175px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 150px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+
+/*  Login User CSS                                                  */
+
+.login-user-container {
+  
+}
+
+.login-user-h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.login-user-link {
+  text-align: end;
+  margin-top: 13px;
+  margin-right: 254px;
+  font-size: medium;
+}
+
+.login-user-form-container {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-user-form-h3 {
+  text-align: center;
+  width: 60px;
+  background-color: white;
+  position: relative;
+  top: -275px;
+  right: -160px;
+}
+
+.login-user-form {
+  width: 700px;
+  height: 200px;
+  border: 2px solid black;
+  padding-top: 60px;
+}
+
+.login-user-input1, .login-user-input2 {
+  margin-left: 35px;
+  width: 300px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.login-user-input1 {
+  margin-left: 63px;
+}
+
+.login-user-input2 {
+  margin-left: 32px;
+}
+
+.user-row {
+  text-align: start;
+  margin-left: 100px;
+}
+
+.login-user-info-message {
+  position: relative;
+  left: -84px;
+  margin-bottom: 10px;
+}
+
+.login-user-submit {
+  position: relative;
+  left: -175px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 30px;
+  width: 150px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+
+/* Edit Account                                                 */
+
+.edit-user-container {
+  
+}
+
+.edit-user-h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.edit-user-link {
+  text-align: end;
+  margin-top: 13px;
+  margin-right: 254px;
+  font-size: medium;
+}
+
+.edit-user-form-container {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-user-form-h3 {
+  text-align: center;
+  width: 150px;
+  background-color: white;
+  position: relative;
+  top: -450px;
+  right: -160px;
+}
+
+.edit-user-form {
+  width: 700px;
+  height: 375px;
+  border: 2px solid black;
+  padding-top: 60px;
+}
+
+.edit-user-input1, .edit-user-input2, .edit-user-input3, .edit-user-input4, .edit-user-input5, .edit-user-input6 {
+  margin-left: 30px;
+  width: 300px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.edit-user-input1 {
+  margin-left: 32px;
+}
+
+.edit-user-input3 {
+  margin-left: 68px;
+}
+
+.edit-user-input4 {
+  margin-left: 37px;
+}
+
+.edit-user-input5 {
+  margin-left: 35px;
+}
+
+.edit-user-input5 {
+  margin-left: 37px;
+}
+
+.edit-user-input6 {
+  margin-left: 34px;
+}
+
+
+.user-row {
+  text-align: start;
+  margin-left: 100px;
+}
+
+.edit-user-info-message {
+  position: relative;
+  left: -84px;
+  margin-bottom: 10px;
+}
+
+.edit-user-submit {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 150px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.delete-user {
+  position: relative;
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  right: -50px;
+  width: 150px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.edit-user-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+/* User Dashboard CSS                                               */
+
+
+.dashboard-user-container {
+  
+}
+
+.dashboard-user-h1 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.dashboard-user-hr {
+  border: 1px solid black;
+}
+
+.dashboard-user-home-link {
+  margin-bottom: 13px;
+  text-align: center;
+  font-size: large;
+}
+
+.dashboard-bottom-container {
+  margin-top: 40px;
+}
+
+/* Discussion post feed */
+
+.dashboard-postfeed-container {
+  padding-left: 50px;
+  margin-left: 40px;
+  width: 550px;
+  height: 600px;
+  border: 2px solid black;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dashboard-discussion-card {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  width: 450px;
+  border: 2px solid black;
+}
+
+.dashboard-discussion-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-discussion-card-bottom {
+  margin-top: 10px
+}
+
+.dashboard-discussion-card-edit-button {
+  position: relative;
+  left: 360px;
+  margin-top: 10px;
+  padding: 2px;
+  width: 75px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
 }
