@@ -316,7 +316,7 @@
 
 .dashboard-user-h1 {
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: larger;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
@@ -334,6 +334,7 @@
 
 .dashboard-bottom-container {
   margin-top: 40px;
+  display: flex;
 }
 
 /* Discussion post feed */
@@ -375,4 +376,620 @@
   width: 75px;
   box-shadow: 2px 2px black;
   background-color: rgb(255, 255, 255);
+}
+
+/* Side nav boxes */
+
+.dashboard-side-nav-conatainer {
+  width: 300px;
+}
+
+.dashboard-side-nav-box1 {
+  border: 2px solid black;
+  width: 150px;
+  height: 125px;
+  margin-left: 125px;
+  padding: 20px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+}
+
+.dashboard-side-nav-box1-links {
+  margin-top: 20px;
+}
+
+.dashboard-side-nav-box2 {
+  border: 2px solid black;
+  width: 250px;
+  height: 175px;
+  margin-left: 75px;
+  padding: 20px;
+  padding-top: 20px;
+}
+
+/* User View - Home CSS                                               */
+
+.home-user-container {
+  
+}
+
+.home-user-h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.home-user-hr {
+  border: 1px solid black;
+}
+
+.home-user-home-link {
+  margin-bottom: 13px;
+  text-align: center;
+  font-size: large;
+}
+
+.home-bottom-container {
+  margin-top: 40px;
+  display: flex;
+}
+
+/* Discussion post feed */
+
+.home-postfeed-container {
+  padding-left: 50px;
+  margin-left: 40px;
+  width: 550px;
+  height: 600px;
+  border: 2px solid black;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.home-discussion-card {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  width: 450px;
+  border: 2px solid black;
+}
+
+.home-discussion-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-discussion-card-bottom {
+  margin-top: 10px
+}
+
+.home-discussion-card-edit-button {
+  position: relative;
+  left: 360px;
+  margin-top: 10px;
+  padding: 2px;
+  width: 75px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Side nav boxes */
+
+.home-side-nav-conatainer {
+  width: 300px;
+}
+
+.home-side-nav-box1 {
+  width: 200px;
+  margin-left: 125px;
+  padding: 20px;
+  font-size: large;
+} 
+
+.home-side-nav-links {
+  margin-left: -10px;
+  margin-right: 55px;
+}
+
+.home-side-nav-hr {
+  width: 225px;
+  margin-bottom: 20px;
+  margin-left: 110px;
+  border: 1px solid black;
+}
+
+
+.home-side-nav-box2, .home-side-nav-box3 {
+  border: 2px solid black;
+  width: 150px;
+  height: 125px;
+  margin-left: 125px;
+  padding: 20px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+}
+
+.home-side-nav-box2-links {
+  margin-top: 35px;
+}
+
+.home-side-nav-box3-button {
+  margin-top: 25px;
+  height: 30px;
+  width: 150px;
+  box-shadow: 2px 2px black;
+  background: white;
+}
+
+/* Create Discussion CSS                                                        */
+
+.create-discussion-container {
+  
+}
+
+.create-discussion-h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.create-discussion-link {
+  text-align: end;
+  margin-top: 13px;
+  margin-right: 254px;
+  font-size: medium;
+}
+
+.create-discussion-form-container {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-discussion-form-h3 {
+  text-align: center;
+  width: 170px;
+  background-color: white;
+  position: relative;
+  top: -450px;
+  right: -160px;
+}
+
+.create-discussion-form {
+  width: 700px;
+  height: 375px;
+  border: 2px solid black;
+  padding-top: 60px;
+}
+
+.create-discussion-input1, .create-discussion-body {
+  margin-left: 30px;
+  width: 450px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.create-discussion-input1 {
+  margin-left: 32px;
+  vertical-align: top;
+}
+
+.create-discussion-body {
+  height: 125px;
+  width: 450px;
+  vertical-align: top;
+  border: 2px solid black;
+  box-shadow: 1px 1px black;
+  margin-left: 26px;
+}
+
+.discussion-row {
+  text-align: start;
+  margin-left: 100px;
+}
+
+.create-discussion-info-message {
+  position: relative;
+  left: -84px;
+  margin-bottom: 10px;
+}
+
+.create-discussion-submit {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: -100px;
+  width: 200px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.delete-discussion-button {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 200px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 140px;
+}
+
+/* Edit Discussion CSS                                                      */
+
+.edit-discussion-container {
+  
+}
+
+.edit-discussion-h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.edit-discussion-link {
+  text-align: end;
+  margin-top: 13px;
+  margin-right: 254px;
+  font-size: medium;
+}
+
+.edit-discussion-form-container {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-discussion-form-h3 {
+  text-align: center;
+  width: 145px;
+  background-color: white;
+  position: relative;
+  top: -450px;
+  right: -160px;
+}
+
+.edit-discussion-form {
+  width: 700px;
+  height: 375px;
+  border: 2px solid black;
+  padding-top: 60px;
+}
+
+.edit-discussion-input1, .edit-discussion-body {
+  margin-left: 30px;
+  width: 450px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.edit-discussion-input1 {
+  margin-left: 32px;
+  vertical-align: top;
+}
+
+.edit-discussion-body {
+  height: 125px;
+  width: 450px;
+  vertical-align: top;
+  border: 2px solid black;
+  box-shadow: 1px 1px black;
+  margin-left: 26px;
+}
+
+.discussion-row {
+  text-align: start;
+  margin-left: 100px;
+}
+
+.edit-discussion-info-message {
+  position: relative;
+  left: -84px;
+  margin-bottom: 10px;
+}
+
+.edit-discussion-submit {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: -100px;
+  width: 200px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.edit-discussion-delete-button {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 200px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 140px;
+}
+
+
+/* View Discussion CSS                                                              */
+
+.view-discussion-container {
+  
+}
+
+.view-discussion-h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.view-discussion-home-link {
+  text-align: center;
+  font-size: large;
+  margin-bottom: -20px;
+}
+
+.view-discussion-bottom-container {
+  margin-top: 40px;
+  padding-left: 50px;
+}
+
+.view-discussion-box1, .view-discussion-box2 {
+  border: 2px solid black;
+  width: 900px;
+  height: 300px;
+}
+
+.view-discussion-box1 {
+  padding: 20px;
+  margin-bottom: 40px;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.view-discussion-box2 {
+  padding: 20px;
+  height: 200px;
+  overflow-x: none;
+  overflow-y: auto;
+}
+
+.view-discussion-box1-h1-date {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.view-discussion-box2-h1-date {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.view-discussion-box1-body, .view-discussion-box2-body {
+  margin-top: 20px;
+}
+
+.view-discussion-box1-button {
+  position: relative;
+  left: 800px;
+  width: 75px;
+  padding: 4px;
+  margin-top: 20px;
+  box-shadow: 2px 2px black;
+  background: white;
+}
+
+
+/* Create Comment CSS                                                         */
+
+
+.create-comment-container {
+  
+}
+
+.create-comment-h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.create-comment-link {
+  text-align: end;
+  margin-top: 13px;
+  margin-right: 254px;
+  font-size: medium;
+}
+
+.create-comment-form-container {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-comment-form-h3 {
+  text-align: center;
+  width: 170px;
+  background-color: white;
+  position: relative;
+  top: -450px;
+  right: -160px;
+}
+
+.create-comment-form {
+  width: 700px;
+  height: 375px;
+  border: 2px solid black;
+  padding-top: 60px;
+}
+
+.create-comment-input1, .create-comment-body {
+  margin-left: 30px;
+  width: 450px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.create-comment-input1 {
+  margin-left: 32px;
+  vertical-align: top;
+}
+
+.create-comment-body {
+  height: 125px;
+  width: 450px;
+  vertical-align: top;
+  border: 2px solid black;
+  box-shadow: 1px 1px black;
+  margin-left: 26px;
+}
+
+.comment-row {
+  text-align: start;
+  margin-left: 100px;
+}
+
+.create-comment-info-message {
+  position: relative;
+  left: -84px;
+  margin-bottom: 10px;
+}
+
+.create-comment-submit {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: -100px;
+  width: 200px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.delete-comment-button {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 200px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 140px;
+}
+
+
+/* Edit Comment CSS                                                               */
+
+
+.edit-comment-container {
+  
+}
+
+.edit-comment-h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.edit-comment-link {
+  text-align: end;
+  margin-top: 13px;
+  margin-right: 254px;
+  font-size: medium;
+}
+
+.edit-comment-form-container {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-comment-form-h3 {
+  text-align: center;
+  width: 145px;
+  background-color: white;
+  position: relative;
+  top: -450px;
+  right: -160px;
+}
+
+.edit-comment-form {
+  width: 700px;
+  height: 375px;
+  border: 2px solid black;
+  padding-top: 60px;
+}
+
+.edit-comment-input1, .edit-comment-body {
+  margin-left: 30px;
+  width: 450px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.edit-comment-input1 {
+  margin-left: 32px;
+  vertical-align: top;
+}
+
+.edit-comment-body {
+  height: 125px;
+  width: 450px;
+  vertical-align: top;
+  border: 2px solid black;
+  box-shadow: 1px 1px black;
+  margin-left: 26px;
+}
+
+.comment-row {
+  text-align: start;
+  margin-left: 100px;
+}
+
+.edit-comment-info-message {
+  position: relative;
+  left: -84px;
+  margin-bottom: 10px;
+}
+
+.edit-comment-submit {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: -100px;
+  width: 200px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.edit-comment-delete-button {
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 200px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 140px;
 }

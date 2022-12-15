@@ -22,7 +22,7 @@ const UserDashboard = (props) => {
                 <h1> Fire-Connect <img src={fireLogo} /> </h1>
             </div>
             <div className='dashboard-user-home-link'>
-                <Link>Home</Link>
+                <Link to={"/user/home"}>Home</Link>
             </div>
             <hr className='dashboard-user-hr'/>
 
@@ -39,10 +39,63 @@ const UserDashboard = (props) => {
                         </p>
                         <button className='dashboard-discussion-card-edit-button'>Edit</button>
                     </div>
-                    <div className='dashboard-discussion-card-bottom'>
-                        
+                    <div className='dashboard-discussion-card'>
+                        <div className='dashboard-discussion-card-top'>
+                            <p>Fire Prevention Problems: </p>
+                            <p>Created At: 12/13/2022</p>
+                        </div>
+                        <p className='dashboard-discussion-card-bottom'>
+                            A post discussing what are some common problems
+                            that plague the fire ground and any solutions you might have?
+                        </p>
+                        <button className='dashboard-discussion-card-edit-button'>Edit</button>
+                    </div>
+                    <div className='dashboard-discussion-card'>
+                        <div className='dashboard-discussion-card-top'>
+                            <p>Fire Prevention Problems: </p>
+                            <p>Created At: 12/13/2022</p>
+                        </div>
+                        <p className='dashboard-discussion-card-bottom'>
+                            A post discussing what are some common problems
+                            that plague the fire ground and any solutions you might have?
+                        </p>
+                        <button className='dashboard-discussion-card-edit-button'>Edit</button>
+                    </div>
+                    <div className='dashboard-discussion-card'>
+                        <div className='dashboard-discussion-card-top'>
+                            <p>Fire Prevention Problems: </p>
+                            <p>Created At: 12/13/2022</p>
+                        </div>
+                        <p className='dashboard-discussion-card-bottom'>
+                            A post discussing what are some common problems
+                            that plague the fire ground and any solutions you might have?
+                        </p>
+                        <button className='dashboard-discussion-card-edit-button'>Edit</button>
+                    </div>
+                    <div className='dashboard-discussion-card'>
+                        <div className='dashboard-discussion-card-top'>
+                            <p>Fire Prevention Problems: </p>
+                            <p>Created At: 12/13/2022</p>
+                        </div>
+                        <p className='dashboard-discussion-card-bottom'>
+                            A post discussing what are some common problems
+                            that plague the fire ground and any solutions you might have?
+                        </p>
+                        <button className='dashboard-discussion-card-edit-button'>Edit</button>
                     </div>
                 </div>
+                <div className='dashboard-side-nav-conatainer'>
+                        <div className='dashboard-side-nav-box1'>
+                            <p className='dashboard-side-nav-box1-links'><Link to={"/edit/account"}>Edit Account</Link></p>
+                            <p className='dashboard-side-nav-box1-links'><Link>Find User</Link></p>
+                            <p className='dashboard-side-nav-box1-links'><Link>Delete Account</Link></p>
+                        </div>
+                        <div className='dashboard-side-nav-box2'>
+                            <h3 className='dashboard-side-nav-box2-title'>Orginization Activity: </h3>
+                            <br/>
+                            <p>Activities</p>
+                        </div>
+                    </div>
             </div>
         </div>
     )

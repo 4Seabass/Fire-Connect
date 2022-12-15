@@ -6,13 +6,14 @@ import fireLogo from "../images/flame_curved32x32.png";
 
 
 
-const LoginUser = (props) => {
 
+const LoginAccount = (props) => {
 
-
-
-
-
+    const { id } = useParams();
+    const [ email, setEmail ] = useState("");
+    const [ password, setPassword ] = useState("");
+    const [ accountId, setAccountId ] = useState("");
+    const navigate = useNavigate();
 
 
     return (
@@ -21,7 +22,7 @@ const LoginUser = (props) => {
                 <h1> Fire-Connect <img src={fireLogo} /> </h1>
             </div>
             <div className='login-user-form-container'>
-                <form >
+                <form  >
                     <div className='login-user-form'>
                         <div className='user-row'>
                             <label className='login-user-label'>Email: </label>
@@ -42,4 +43,4 @@ const LoginUser = (props) => {
     )
 }
 
-export default LoginUser;
+export default LoginAccount;

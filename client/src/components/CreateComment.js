@@ -6,7 +6,7 @@ import fireLogo from "../images/flame_curved32x32.png";
 
 
 
-const CreateDiscussion = (props) => {
+const CreateComment = (props) => {
 
 
     const date = new Date();
@@ -21,11 +21,11 @@ const CreateDiscussion = (props) => {
     const [ dateCreated, setDateCreated ] = useState(currentDate);
     const navigate = useNavigate();
 
-    const createDiscussion = (event) => {
+    const createComment = (event) => {
 
         event.preventDefault();
 
-        axios.post("http://localhost:8000/api/create/discussion", {
+        axios.post("http://localhost:8000/api/create/comment", {
             title,
             body,
             dateCreated,
@@ -42,38 +42,35 @@ const CreateDiscussion = (props) => {
 
 
 
-
-
-
     return (
-        <div className='create-discussion-container'>
-            <div className='create-discussion-h1'>
+        <div className='create-comment-container'>
+            <div className='create-comment-h1'>
                 <h1> Fire-Connect <img src={fireLogo} /> </h1>
             </div>
-            <div className='create-discussion-form-container'>
-                <form onSubmit={createDiscussion}>
-                    <div className='create-discussion-form'>
-                        <div className='discussion-row'>
-                            <label className='create-discussion-label'>Title: </label>
-                            <input className='create-discussion-input1' type="text" onChange= { (event) => setTitle(event.target.value)} />
+            <div className='create-comment-form-container'>
+                <form onSubmit={createComment}>
+                    <div className='create-comment-form'>
+                        <div className='comment-row'>
+                            <label className='create-comment-label'>Title: </label>
+                            <input className='create-comment-input1' type="text" onChange= { (event) => setTitle(event.target.value)} />
                         </div>
                         <br />
-                        <div className='discussion-row'>
-                            <label className='create-discussion-label'>Body: </label>
-                            <textarea className='create-discussion-body' id="w3review" name="w3review" rows="4" cols="50" onChange= { (event) => setBody(event.target.value)}>
+                        <div className='comment-row'>
+                            <label className='create-comment-label'>Body: </label>
+                            <textarea className='create-comment-body' id="w3review" name="w3review" rows="4" cols="50" onChange= { (event) => setBody(event.target.value)}>
                                 
                             </textarea>
                         </div>
                         <br />
-                        <div className='create-discussion-buttons'>
-                            <input className='create-discussion-submit' type="submit" value="Create Discussion Post"/>
+                        <div className='create-comment-buttons'>
+                            <input className='create-comment-submit' type="submit" value="Create Comment"/>
                         </div>
                     </div>
                 </form>
             </div>
-            <h3 className='create-discussion-form-h3'>Create Discussion</h3>
+            <h3 className='create-comment-form-h3'>Create Comment</h3>
         </div>
     )
 }
 
-export default CreateDiscussion;
+export default CreateComment;
