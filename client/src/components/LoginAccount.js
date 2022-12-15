@@ -12,8 +12,45 @@ const LoginAccount = (props) => {
     const { id } = useParams();
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
-    const [ accountId, setAccountId ] = useState("");
+    const [ errors, setErrors ] = useState({});
     const navigate = useNavigate();
+    const [ currentAccount, setCurrentAccount ] = useState("");
+    const { loggedInAcount, setLoggedInAccount } = props;
+
+
+    useEffect(()=>{
+        axios.get(`http://localhost:8000/api/selected/account/email/${email}`
+        )
+        .then((res)=>{
+            setLoggedInAccount(res.data);
+	})
+        .catch((err)=>{
+            console.log("There is an error", err);
+        });
+    }, [email],
+    );
+
+    const loginAccount = (event) => {
+
+        event.preventDefault();
+        
+        axios.post("http://localhost:8000/api/account/login", {
+            email,
+            password,
+        },
+        {
+            withCredentials: true,
+        },
+        )
+            .then(res => {
+                navigate(`/dashboard/${loggedInAcount.username}`);
+            })
+            .catch((err) => {
+                console.log("Wrong Information")
+                console.log(err.response.data);
+                setErrors(err.response.data.message);
+            })
+        }
 
 
     return (
@@ -22,16 +59,16 @@ const LoginAccount = (props) => {
                 <h1> Fire-Connect <img src={fireLogo} /> </h1>
             </div>
             <div className='login-user-form-container'>
-                <form  >
+                <form onSubmit={loginAccount} >
                     <div className='login-user-form'>
                         <div className='user-row'>
                             <label className='login-user-label'>Email: </label>
-                            <input className='login-user-input1' type="text" />
+                            <input className='login-user-input1' type="text" onChange= { (event) => setEmail(event.target.value)} />
                         </div>
                         <br />
                         <div className='user-row'>
                             <label className='login-user-label'>Password: </label>
-                            <input className='login-user-input2' type="password" />
+                            <input className='login-user-input2' type="password" onChange= { (event) => setPassword(event.target.value)} />
                         </div>
                         <br />
                         <input className='login-user-submit' type="submit" value="Login"/>

@@ -9,14 +9,15 @@ import fireLogo from "../images/flame_curved32x32.png";
 const EditDiscussion = (props) => {
 
     const { id } = useParams();
-    const { loggedInUser, setLoggedInUser } = props;
+    const { loggedInAcount, setLoggedInAccount } = props;
     const [ title, setTitle ] = useState("");
     const [ body, setBody ] = useState("");
     const navigate = useNavigate();
 
     useEffect(() => {
 
-        axios.get(`http://localhost:8000/api/selected/discussion/${id}`)
+        axios.get(`http://localhost:8000/api/selected/discussion/${id}`,
+        {withCredentials: true})
         .then(res => {
             setTitle(res.data.title);
             setBody(res.data.body);
@@ -32,18 +33,21 @@ const EditDiscussion = (props) => {
         axios.put(`http://localhost:8000/api/update/discussion/${id}`, {
             title,
             body,
-        })
+        },
+        {withCredentials: true}
+        )
             .then(res => {
                 console.log(res);
-                navigate("/dashboard");
+                navigate(`/dashboard/${loggedInAcount.username}`);
         })
             .catch(err => console.log("There was an error with updating current values with new values", err))
     }
 
     const deleteDiscussion = () => {
-        axios.delete(`http://localhost:8000/api/delete/discussion/${id}`, )
+        axios.delete(`http://localhost:8000/api/delete/discussion/${id}`,
+        {withCredentials: true})
         .then(res => {
-            navigate("/dashboard");
+            navigate(`/dashboard/${loggedInAcount.username}`);
             console.log(res);
         })
         .catch(err => console.log(err))

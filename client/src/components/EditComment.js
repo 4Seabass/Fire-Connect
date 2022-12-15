@@ -9,14 +9,15 @@ import fireLogo from "../images/flame_curved32x32.png";
 const EditComment = (props) => {
 
     const { id } = useParams();
-    const { loggedInUser, setLoggedInUser } = props;
+    const { loggedInAcount, setLoggedInAcount } = props;
     const [ title, setTitle ] = useState("");
     const [ body, setBody ] = useState("");
     const navigate = useNavigate();
 
     useEffect(() => {
 
-        axios.get(`http://localhost:8000/api/selected/comment/${id}`)
+        axios.get(`http://localhost:8000/api/selected/comment/${id}`,
+        {withCredentials: true})
         .then(res => {
             setTitle(res.data.title);
             setBody(res.data.body);
@@ -32,10 +33,12 @@ const EditComment = (props) => {
         axios.put(`http://localhost:8000/api/update/comment/${id}`, {
             title,
             body,
-        })
+        },
+        {withCredentials: true}
+        )
             .then(res => {
                 console.log(res);
-                navigate("/dashboard");
+                navigate(`/dashboard/${loggedInAcount.username}`);
         })
             .catch(err => console.log("There was an error with updating current values with new values", err))
     }

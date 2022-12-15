@@ -15,10 +15,11 @@ const CreateDiscussion = (props) => {
     let year = date.getFullYear();
     let currentDate = `${month}-${day}-${year}`;
 
-
+    const { commentDiscussion, setCommentDiscussion } = props;
     const [ title, setTitle ] = useState("");
     const [ body, setBody ] = useState("");
     const [ dateCreated, setDateCreated ] = useState(currentDate);
+    const { loggedInAcount, setLoggedInAccount } = props;
     const navigate = useNavigate();
 
     const createDiscussion = (event) => {
@@ -29,10 +30,14 @@ const CreateDiscussion = (props) => {
             title,
             body,
             dateCreated,
-        })
+        },
+        {
+            withCredentials: true
+        }
+        )
             .then(res => {
-                navigate("/login");
                 console.log("The data for the new Account", res.data);
+                navigate(`/dashboard/${loggedInAcount.username}`)
             })
             .catch((err) => {
                 console.log(err);

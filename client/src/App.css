@@ -8,6 +8,14 @@
   margin: 0px auto;
 }
 
+.error-text {
+
+}
+
+.confirm-account {
+  color: green;
+}
+
 
 /* Register User Page CSS                                            */
 
@@ -328,8 +336,17 @@
 
 .dashboard-user-home-link {
   margin-bottom: 13px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   font-size: large;
+}
+
+.dashboard-logout-button {
+  padding: 2px;
+  background-color: white;
+  font-size: medium;
+  box-shadow: 2px 2px black;
 }
 
 .dashboard-bottom-container {
@@ -368,11 +385,19 @@
   margin-top: 10px
 }
 
-.dashboard-discussion-card-edit-button {
-  position: relative;
+.dashboard-discussion-card-view-button {
   left: 360px;
   margin-top: 10px;
-  padding: 2px;
+  padding: 4px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.dashboard-discussion-card-edit-button {
+  position: relative;
+  left: 250px;
+  margin-top: 10px;
+  padding: 4px;
   width: 75px;
   box-shadow: 2px 2px black;
   background-color: rgb(255, 255, 255);
@@ -395,7 +420,7 @@
 }
 
 .dashboard-side-nav-box1-links {
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .dashboard-side-nav-box2 {
@@ -475,6 +500,13 @@
   width: 75px;
   box-shadow: 2px 2px black;
   background-color: rgb(255, 255, 255);
+}
+
+.home-discussion-card-button {
+  margin-top: 10px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+  background: white;
 }
 
 /* Side nav boxes */
@@ -559,13 +591,13 @@
   width: 170px;
   background-color: white;
   position: relative;
-  top: -450px;
+  top: -375px;
   right: -160px;
 }
 
 .create-discussion-form {
   width: 700px;
-  height: 375px;
+  height: 300px;
   border: 2px solid black;
   padding-top: 60px;
 }
@@ -736,42 +768,54 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+.view-discussion-box1-h1-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
 .view-discussion-home-link {
   text-align: center;
   font-size: large;
   margin-bottom: -20px;
 }
 
-.view-discussion-bottom-container {
-  margin-top: 40px;
-  padding-left: 50px;
+.view-discussion-user-hr {
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
-.view-discussion-box1, .view-discussion-box2 {
-  border: 2px solid black;
-  width: 900px;
-  height: 300px;
+.view-discussion-bottom-container {
+  margin-top: 40px;
+  padding-left: 30px;
 }
 
 .view-discussion-box1 {
+  border: 2px solid black;
+  width: 900px;
   padding: 20px;
   margin-bottom: 40px;
-  height: 300px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-.view-discussion-box2 {
-  padding: 20px;
-  height: 200px;
-  overflow-x: none;
-  overflow-y: auto;
+.view-discussion-comment-box {
+  border: 2px solid black;
+  width: 880px;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.view-discussion-box1-h1-date {
+.view-discussion-comment-box-h1-date {
   align-items: center;
   justify-content: space-between;
   display: flex;
+  margin-bottom: 20px;
 }
 
 .view-discussion-box2-h1-date {
@@ -790,6 +834,25 @@
   width: 75px;
   padding: 4px;
   margin-top: 20px;
+  box-shadow: 2px 2px black;
+  background: white;
+}
+
+.view-discussion-box1-create-comment {
+  position: relative;
+  left: 600px;
+  padding: 4px;
+  margin-top: 20px;
+  box-shadow: 2px 2px black;
+  background: white;
+}
+
+.view-comment-box1-button-edit{
+  position: relative;
+  left: 800px;
+  padding: 4px;
+  margin-top: 20px;
+  margin-bottom: -20px;
   box-shadow: 2px 2px black;
   background: white;
 }
@@ -992,4 +1055,209 @@
   background-color: rgb(255, 255, 255);
   position: relative;
   left: 140px;
+}
+
+/* View Comment CSS                                                          */
+
+.view-comment-container {
+  
+}
+
+.view-comment-h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.view-comment-home-link {
+  text-align: center;
+  font-size: large;
+  margin-bottom: -20px;
+}
+
+.view-comment-bottom-container {
+  margin-top: 40px;
+  padding-left: 50px;
+}
+
+.view-comment-box1 {
+  border: 2px solid black;
+  width: 900px;
+  height: 300px;
+  padding: 20px;
+  margin-bottom: 40px;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.view-comment-comment-box {
+  border: 2px solid black;
+  width: 880px;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.view-comment-comment-box-h1-date {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.view-comment-box2-h1-date {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.view-comment-box1-body, .view-comment-box2-body {
+  margin-top: 20px;
+}
+
+.view-comment-box1-button {
+  position: relative;
+  left: 800px;
+  padding: 5px;
+  margin-top: 20px;
+  box-shadow: 2px 2px black;
+  background: white;
+}
+
+.view-comment-box1-create-comment {
+  position: relative;
+  left: 600px;
+  padding: 4px;
+  margin-top: 20px;
+  box-shadow: 2px 2px black;
+  background: white;
+}
+
+
+/* HomePage Non User CSS                                                 */
+
+
+.home-page-user-container {
+  
+}
+
+.home-page-user-h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.home-page-user-hr {
+  border: 1px solid black;
+}
+
+.home-page-user-home-page-link {
+  margin-bottom: 13px;
+  text-align: center;
+  font-size: large;
+}
+
+.home-page-bottom-container {
+  margin-top: 40px;
+  display: flex;
+}
+
+/* Discussion post feed */
+
+.home-page-postfeed-container {
+  padding-left: 50px;
+  margin-left: 40px;
+  width: 550px;
+  height: 600px;
+  border: 2px solid black;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.home-page-discussion-card {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  width: 450px;
+  border: 2px solid black;
+}
+
+.home-page-discussion-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-page-discussion-card-bottom {
+  margin-top: 10px
+}
+
+.home-page-discussion-card-edit-button {
+  position: relative;
+  left: 360px;
+  margin-top: 10px;
+  padding: 2px;
+  width: 75px;
+  box-shadow: 2px 2px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.home-page-discussion-card-button {
+  margin-top: 10px;
+  padding: 5px;
+  box-shadow: 2px 2px black;
+  background: white;
+}
+
+/* Side nav boxes */
+
+.home-page-side-nav-conatainer {
+  width: 300px;
+}
+
+.home-page-side-nav-box1 {
+  width: 200px;
+  margin-left: 125px;
+  padding: 20px;
+  font-size: large;
+} 
+
+.home-page-side-nav-links {
+  margin-left: -10px;
+  margin-right: 55px;
+}
+
+.home-page-side-nav-hr {
+  width: 225px;
+  margin-bottom: 20px;
+  margin-left: 110px;
+  border: 1px solid black;
+}
+
+
+.home-page-side-nav-box2, .home-page-side-nav-box3 {
+  border: 2px solid black;
+  width: 150px;
+  height: 125px;
+  margin-left: 125px;
+  padding: 20px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+}
+
+.home-page-side-nav-box2-links {
+  margin-top: 20px;
+}
+
+.home-page-side-nav-box3-button {
+  margin-top: 25px;
+  height: 30px;
+  width: 150px;
+  box-shadow: 2px 2px black;
+  background: white;
 }

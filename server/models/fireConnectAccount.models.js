@@ -7,48 +7,28 @@ const AccountSchema = new mongoose.Schema({
         required: [true, "First name is required!"],
         minLength: [2, "First must be a minimum of 2 characters!"],
     },
-
     lastName: {
         type: String,
         required: [true, "Last name is required!"],
         minLength: [2, "Last name must be a minimum of 2 characters!"],
     },
-
     email: {
         type: String,
         required: [true, "Email is required!"],
     },
-
     password: {
         type: String,
         required: [true, "Password is required!"],
         minLength: [8, "Password must be a minimum of 8 characters!"],
     },
-
     username: {
         type: String,
         required: [true, "Username is required!"],
         minLength: [4, "Username must be a minimum of 3 characters!"],
     },
-
     dateCreated: {
         type: Date,
     },
-
-    discussions: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Discussion",
-        }
-    ],
-
-    comments: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Comment",
-        }
-    ],
-
     }, 
     { timestamps: true }
 );

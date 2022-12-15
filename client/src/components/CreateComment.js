@@ -18,10 +18,17 @@ const CreateComment = (props) => {
 
     const [ title, setTitle ] = useState("");
     const [ body, setBody ] = useState("");
+    const [ createdFor, setCreatedFor ] = useState("");
     const [ dateCreated, setDateCreated ] = useState(currentDate);
+    const { commentDiscussionId, setCommentDiscussionId } = props;
     const navigate = useNavigate();
+    
+    useEffect(()=>{
+        setCreatedFor(commentDiscussionId);
+    }, [],
+    );
 
-    const createComment = (event) => {
+    const createCommentForDiscussion = (event) => {
 
         event.preventDefault();
 
@@ -29,10 +36,15 @@ const CreateComment = (props) => {
             title,
             body,
             dateCreated,
-        })
+            createdFor,
+        },
+        {
+            withCredentials: true
+        }
+        )
             .then(res => {
-                navigate("/login");
                 console.log("The data for the new Account", res.data);
+                navigate(`/view/discussion/${commentDiscussionId}`)
             })
             .catch((err) => {
                 console.log(err);
@@ -48,7 +60,7 @@ const CreateComment = (props) => {
                 <h1> Fire-Connect <img src={fireLogo} /> </h1>
             </div>
             <div className='create-comment-form-container'>
-                <form onSubmit={createComment}>
+                <form onSubmit={createCommentForDiscussion}>
                     <div className='create-comment-form'>
                         <div className='comment-row'>
                             <label className='create-comment-label'>Title: </label>

@@ -10,7 +10,10 @@ const createAccount = (req, res) => {
         .then((newAccount) => {
             console.log(newAccount);
             console.log("Succcefully Created!")
-            res.json(newAccount)
+            res.json({
+                confirmMessage: "Registration completed succefully!",
+                account: newAccount
+            });
         })
         .catch((err) => {
             console.log("Account creation not successfull!")
@@ -24,7 +27,7 @@ const loginAccount = (req, res) => {
     Account.findOne({ email: req.body.email })
         .then((accountSelected) => {
             if (accountSelected === null) {
-                res.json("Invalid login credentials")
+                res.status(400).json("Invalid login credentials")
             }
             else {
                 bcrypt.compare( req.body.password, accountSelected.password )
@@ -51,8 +54,8 @@ const loginAccount = (req, res) => {
                                 },
                             ).json({
                                 message: "Succesfully logged in!",
-                                accountLoggedIn: selectedAccount.username,
-                                accountId: selectedAccount._id
+                                accountLoggedIn: accountSelected.username,
+                                accountId: accountSelected._id
                             });
                         }
                         else {
@@ -76,7 +79,9 @@ const loginAccount = (req, res) => {
 const logoutAccount = (req, res) => {
     console.log("Logging out!")
     res.clearCookie("accounttoken");
-    res.sendStatus(200).json("You have logged out successfully!");
+    res.json({
+        message: "You have logged out successfully!",
+    });
 }
 
 const findAllAccounts = (req, res) => {
@@ -90,9 +95,21 @@ const findAllAccounts = (req, res) => {
         })
 }
 
-const findOneAccount = (req, res) => {
+const findOneAccountById = (req, res) => {
     Account.findOne({ _id: req.params.id })
         .then(selectedAccount => res.json(selectedAccount))
+        .catch(err => res.json(err));
+}
+
+const findOneAccountByEmail = (req, res) => {
+    Account.findOne({ email: req.params.email })
+        .then(selectedAccount => res.json(selectedAccount))
+        .catch(err => res.json(err));
+}
+
+const findLoggedInAccount = (req, res) => {
+    Account.findOne({ _id: req.jwtpayload.id })
+        .then(currentAccount => res.json(currentAccount))
         .catch(err => res.json(err));
 }
 
@@ -112,8 +129,10 @@ module.exports = {
     createAccount,
     loginAccount,
     logoutAccount,
+    findLoggedInAccount,
     findAllAccounts,
-    findOneAccount,
+    findOneAccountById,
+    findOneAccountByEmail,
     updateOneAccount,
     deleteAccount
 };
