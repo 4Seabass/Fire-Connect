@@ -104,7 +104,7 @@ const UserDashboard = (props) => {
                 <div className='dashboard-side-nav-conatainer'>
                         <div className='dashboard-side-nav-box1'>
                             <p className='dashboard-side-nav-box1-links'><Link className='all-links' to={`/edit/account/${loggedInAcount._id}`}><span className='all-links'>Edit Account</span></Link></p>
-                            <p className='dashboard-side-nav-box1-links'><Link className='all-links'><span className='all-links'>Find User</span></Link></p>
+                            <p className='dashboard-side-nav-box1-links'><Link className='all-links' to={`/view/account/${loggedInAcount._id}`}><span className='all-links'>View Account</span></Link></p>
                             <p className='dashboard-side-nav-box1-links'><Link className='all-links' onClick={ (event) => deleteAccount(loggedInAcount._id)}><span className='all-links'>Delete Account</span></Link></p>
                         </div>
                         <div className='dashboard-side-nav-box2'>
