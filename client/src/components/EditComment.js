@@ -38,15 +38,16 @@ const EditComment = (props) => {
         )
             .then(res => {
                 console.log(res);
-                navigate(`/dashboard/${loggedInAcount.username}`);
+                navigate(`/user/home`);
         })
             .catch(err => console.log("There was an error with updating current values with new values", err))
     }
 
     const deleteComment = () => {
-        axios.delete(`http://localhost:8000/api/delete/comment/${id}`, )
+        axios.delete(`http://localhost:8000/api/delete/comment/${id}`,
+        {withCredentials: true})
         .then(res => {
-            navigate("/dashboard");
+            navigate("/user/home");
             console.log(res);
         })
         .catch(err => console.log(err))

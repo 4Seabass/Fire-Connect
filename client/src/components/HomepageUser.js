@@ -76,7 +76,7 @@ const HomepageUser = (props) => {
                     <hr className='home-side-nav-hr'/>
                         <div className='home-side-nav-box2'>
                             <p className='home-side-nav-box2-links'><Link className='all-links' to={`/dashboard/${loggedInAcount.username}`}><span className='all-links'>User Dashboard</span></Link></p>
-                            <p className='home-side-nav-box2-links'><Link className='all-links' to={"/view/account/:id"}><span className='all-links'>View Account</span></Link></p>
+                            <p className='home-side-nav-box2-links'><Link className='all-links' to={`/view/account/${loggedInAcount._id}`}><span className='all-links'>View Account</span></Link></p>
                         </div>
                         <div className='home-side-nav-box3'>
                             <button className='home-side-nav-box3-button' onClick={createDiscussion}><span className='all-links'>Create Discussion</span></button>

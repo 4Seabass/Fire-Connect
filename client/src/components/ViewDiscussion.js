@@ -61,12 +61,7 @@ const ViewDiscussion = (props) => {
 
 
     const editDiscussion = (selectedDiscussion) => {
-        if (loggedInAcount._id === selectedDiscussion.createdBy._id) {
-            navigate(`/edit/discussion/${selectedDiscussion._id}`)
-        }
-        else {
-            return null
-        }
+        navigate(`/edit/discussion/${selectedDiscussion._id}`)
     };
 
     const editComment = (commentId) => {
