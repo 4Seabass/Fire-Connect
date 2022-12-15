@@ -70,13 +70,13 @@ const HomepageUser = (props) => {
                 </div>
                 <div className='home-side-nav-conatainer'>
                     <div className='home-side-nav-box1'>
-                        <span className='home-side-nav-links'><Link to={"/user/home"}><span className='all-links'>Home</span></Link></span>
-                        <Link><span className='all-links'>About Us</span></Link>
+                        <span className='home-side-nav-links'><Link className='all-links' to={"/user/home"}><span className='all-links'>Home</span></Link></span>
+                        <Link className='all-links'><span className='all-links'>About Us</span></Link>
                     </div>
                     <hr className='home-side-nav-hr'/>
                         <div className='home-side-nav-box2'>
-                            <p className='home-side-nav-box2-links'><Link to={`/dashboard/${loggedInAcount.username}`}><span className='all-links'>User Dashboard</span></Link></p>
-                            <p className='home-side-nav-box2-links'><Link to={"/user/home"}><span className='all-links'>Find User</span></Link></p>
+                            <p className='home-side-nav-box2-links'><Link className='all-links' to={`/dashboard/${loggedInAcount.username}`}><span className='all-links'>User Dashboard</span></Link></p>
+                            <p className='home-side-nav-box2-links'><Link className='all-links' to={"/view/account/:id"}><span className='all-links'>View Account</span></Link></p>
                         </div>
                         <div className='home-side-nav-box3'>
                             <button className='home-side-nav-box3-button' onClick={createDiscussion}><span className='all-links'>Create Discussion</span></button>

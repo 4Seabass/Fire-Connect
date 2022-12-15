@@ -14,6 +14,7 @@ import CreateComment from './components/CreateComment';
 import EditComment from './components/EditComment';
 import ViewComment from './components/ViewComment';
 import HomepageNonUser from './components/HomePageNonUser';
+import ViewAccount from './components/ViewAccount';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/edit/discussion/:id" element={<EditDiscussion loggedInAcount={loggedInAcount} setLoggedInAccount={setLoggedInAccount} />} />
             <Route path="/edit/account/:id" element={<EditAccount loggedInAcount={loggedInAcount} setLoggedInAccount={setLoggedInAccount} />} />
             <Route path="/view/discussion/:id" element={<ViewDiscussion commentDiscussionId={commentDiscussionId} setCommentDiscussionId={setCommentDiscussionId} loggedInAcount={loggedInAcount} setLoggedInAccount={setLoggedInAccount} />} />
+            <Route path="/view/account/:id" element={<ViewAccount commentDiscussionId={commentDiscussionId} setCommentDiscussionId={setCommentDiscussionId} loggedInAcount={loggedInAcount} setLoggedInAccount={setLoggedInAccount} />} />
             <Route path="/view/comment/:id" element={<ViewComment commentDiscussionId={commentDiscussionId} setCommentDiscussionId={setCommentDiscussionId} loggedInAcount={loggedInAcount} setLoggedInAccount={setLoggedInAccount} />} />
             <Route path="/create/comment" element={<CreateComment commentDiscussionId={commentDiscussionId} setCommentDiscussionId={setCommentDiscussionId} loggedInAcount={loggedInAcount} setLoggedInAccount={setLoggedInAccount} />} />
             <Route path="/edit/comment/:id" element={<EditComment loggedInAcount={loggedInAcount} setLoggedInAccount={setLoggedInAccount} />} />

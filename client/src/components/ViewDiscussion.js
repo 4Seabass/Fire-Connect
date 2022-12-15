@@ -85,7 +85,7 @@ const ViewDiscussion = (props) => {
                 <h1> Fire-Connect <img src={fireLogo} /></h1>
             </div>
             <div className='view-discussion-home-link'>
-                <Link to={"/user/home"}><span className='all-links'>Home</span></Link>
+                <Link className='all-links' to={"/user/home"}><span className='all-links'>Home</span></Link>
                 <hr className='view-discussion-user-hr'/>
             </div>
             <div className='view-discussion-bottom-container'>

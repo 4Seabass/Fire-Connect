@@ -58,14 +58,14 @@ const HomepageNonUser = (props) => {
                 </div>
                 <div className='home-page-side-nav-conatainer'>
                     <div className='home-page-side-nav-box1'>
-                        <span className='home-page-side-nav-links'><Link to={"/home"}><span className='all-links'>Home</span></Link></span>
-                        <Link><span className='all-links'>About Us</span></Link>
+                        <span className='home-page-side-nav-links'><Link  to={"/home"}><span className='all-links'>Home</span></Link></span>
+                        <Link className='all-links'><span className='all-links'>About Us</span></Link>
                     </div>
                     <hr className='home-page-side-nav-hr'/>
                         <div className='home-page-side-nav-box2'>
-                            <p className='home-page-side-nav-box2-links'><Link to={"/home"}><span className='all-links'>Find User</span></Link></p>
-                            <p className='home-page-side-nav-box2-links'><Link to={"/create/account"}><span className='all-links'>Create Account</span></Link></p>
-                            <p className='home-page-side-nav-box2-links'><Link to={"/account/login"}><span className='all-links'>Login</span></Link></p>
+                            <p className='home-page-side-nav-box2-links'><Link className='all-links' to={"/view/account/:id"}><span className='all-links'>View Account</span></Link></p>
+                            <p className='home-page-side-nav-box2-links'><Link className='all-links' to={"/create/account"}><span className='all-links'>Create Account</span></Link></p>
+                            <p className='home-page-side-nav-box2-links'><Link className='all-links' to={"/account/login"}><span className='all-links'>Login</span></Link></p>
                         </div>
                     </div>
             </div>

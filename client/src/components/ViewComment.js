@@ -41,7 +41,7 @@ const ViewComment = (props) => {
                 <h1> Fire-Connect <img src={fireLogo} /> </h1>
             </div>
             <div className='view-comment-home-link'>
-                <Link to={"/user/home"}><span className='all-links'>Home</span></Link>
+                <Link className='all-links' to={"/user/home"}><span className='all-links'>Home</span></Link>
             </div>
             <div className='view-comment-bottom-container'>
                 <div className='view-comment-box1'>
