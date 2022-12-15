@@ -74,7 +74,7 @@ const UserDashboard = (props) => {
                 <h1> Fire-Connect <img src={fireLogo} /> </h1>
             </div>
             <div className='dashboard-user-home-link'>
-                <Link to={"/user/home"}>Home</Link>
+                <Link to={"/user/home"}><span className='all-links'>Home</span></Link>
                 <button className='dashboard-logout-button' onClick={logoutAccount}>Logout</button>
             </div>
             <hr className='dashboard-user-hr'/>
@@ -103,9 +103,9 @@ const UserDashboard = (props) => {
                 </div>
                 <div className='dashboard-side-nav-conatainer'>
                         <div className='dashboard-side-nav-box1'>
-                            <p className='dashboard-side-nav-box1-links'><Link to={`/edit/account/${loggedInAcount._id}`}>Edit Account</Link></p>
-                            <p className='dashboard-side-nav-box1-links'><Link>Find User</Link></p>
-                            <p className='dashboard-side-nav-box1-links'><Link onClick={ (event) => deleteAccount(loggedInAcount._id)}>Delete Account</Link></p>
+                            <p className='dashboard-side-nav-box1-links'><Link to={`/edit/account/${loggedInAcount._id}`}><span className='all-links'>Edit Account</span></Link></p>
+                            <p className='dashboard-side-nav-box1-links'><Link><span className='all-links'>Find User</span></Link></p>
+                            <p className='dashboard-side-nav-box1-links'><Link onClick={ (event) => deleteAccount(loggedInAcount._id)}><span className='all-links'>Delete Account</span></Link></p>
                         </div>
                         <div className='dashboard-side-nav-box2'>
                             <h3 className='dashboard-side-nav-box2-title'>Orginization Activity: </h3>

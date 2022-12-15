@@ -12,6 +12,10 @@
 
 }
 
+.all-links {
+  color: black;
+}
+
 .confirm-account {
   color: green;
 }
@@ -343,7 +347,7 @@
 }
 
 .dashboard-logout-button {
-  padding: 2px;
+  padding: 2px 4px;
   background-color: white;
   font-size: medium;
   box-shadow: 2px 2px black;
@@ -1230,6 +1234,7 @@
 .home-page-side-nav-links {
   margin-left: -10px;
   margin-right: 55px;
+  color: black;
 }
 
 .home-page-side-nav-hr {
@@ -1252,6 +1257,7 @@
 
 .home-page-side-nav-box2-links {
   margin-top: 20px;
+  color: black;
 }
 
 .home-page-side-nav-box3-button {

@@ -98,7 +98,7 @@ const CreateAccount = (props) => {
                         </div>
                         <br />
                         <p className='new-user-info-message'>^ This is what will be your public display name ^</p>
-                        <input className='new-user-submit' type="submit" value="Create User"/>
+                        <span className='all-links'><input className='new-user-submit' type="submit" value="Create User"/></span>
                     </div>
                 </form>
             </div>

@@ -58,7 +58,7 @@ const HomepageUser = (props) => {
                                 <p className='home-discussion-card-bottom'>
                                     {discussion.body}
                                 </p>
-                                <button className='dashboard-discussion-card-view-button' onClick={ (event) => viewDiscussion(discussion._id)}>View Discussion</button>
+                                <button className='dashboard-discussion-card-view-button' onClick={ (event) => viewDiscussion(discussion._id)}><span className='all-links'>View Discussion</span></button>
                             </div>
                         </div>
                     )})
@@ -70,17 +70,17 @@ const HomepageUser = (props) => {
                 </div>
                 <div className='home-side-nav-conatainer'>
                     <div className='home-side-nav-box1'>
-                        <span className='home-side-nav-links'><Link to={"/user/home"}>Home</Link></span>
-                        <Link>About Us</Link>
+                        <span className='home-side-nav-links'><Link to={"/user/home"}><span className='all-links'>Home</span></Link></span>
+                        <Link><span className='all-links'>About Us</span></Link>
                     </div>
                     <hr className='home-side-nav-hr'/>
                         <div className='home-side-nav-box2'>
-                            <p className='home-side-nav-box2-links'><Link to={`/dashboard/${loggedInAcount.username}`}>User Dashboard</Link></p>
-                            <p className='home-side-nav-box2-links'><Link to={"/user/home"}>Find User</Link></p>
+                            <p className='home-side-nav-box2-links'><Link to={`/dashboard/${loggedInAcount.username}`}><span className='all-links'>User Dashboard</span></Link></p>
+                            <p className='home-side-nav-box2-links'><Link to={"/user/home"}><span className='all-links'>Find User</span></Link></p>
                         </div>
                         <div className='home-side-nav-box3'>
-                            <button className='home-side-nav-box3-button' onClick={createDiscussion}>Create Discussion</button>
-                            <button className='home-side-nav-box3-button'>Create Orginization</button>
+                            <button className='home-side-nav-box3-button' onClick={createDiscussion}><span className='all-links'>Create Discussion</span></button>
+                            <button className='home-side-nav-box3-button'><span className='all-links'>Create Orginization</span></button>
                         </div>
                     </div>
             </div>
